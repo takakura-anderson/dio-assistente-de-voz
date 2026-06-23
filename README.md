@@ -42,3 +42,39 @@ Adaptação do "Assistente de Voz Multi-Idiomas Com Whisper e ChatGPT" da DIO pa
 ```bash
 git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
 cd NOME-DO-REPOSITORIO
+```
+### 2. Instalar as Dependências
+Para o modo com APIs da OpenAI:
+
+```Bash
+pip install openai gTTS speechrecognition
+Para o modo 100% Local (Ollama + Whisper Local):
+```
+```Bash
+pip install ollama faster-whisper pyttsx3 speechrecognition
+```
+(Se optar pelo Ollama, certifique-se de baixar o app em ollama.com e rodar o modelo desejado no terminal antes de iniciar: ollama run llama3).
+
+### 3. Configurar Variáveis de Ambiente (Se usar a OpenAI)
+Crie um arquivo .env na raiz do projeto e adicione a sua chave privada:
+
+Snippet de código
+```OPENAI_API_KEY=sua_chave_secreta_aqui```
+
+Nunca envie seu arquivo .env ou exponha sua chave diretamente no código ao subir alterações para o GitHub!
+
+### 4. Executar o Assistente
+```Bash
+python main.py
+```
+🧠 Engenharia de Prompt Aplicada
+O grande diferencial deste assistente está no comportamento da inteligência artificial. O modelo está configurado através de instruções internas (System Prompt) para:
+
+Atuar como um professor nativo paciente.
+
+Fornecer uma resposta natural à sua frase para manter o diálogo fluindo.
+
+Apresentar um feedback estruturado no final, corrigindo brevemente eventuais deslizes gramaticais ou sugerindo vocabulários mais naturais.
+
+📝 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
